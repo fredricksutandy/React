@@ -1,0 +1,36 @@
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    filter: grayscale(1) brightness(0) invert(1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: ''!important; /* Unicode character for right-pointing angle quotation mark */
+  font-size: 20px; /* Set the desired font size */
+  color: #007bff; /* Set the desired color */
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+.swiper-button-prev::after {
+  background-image: url(../images/icons/arrow-left.png);
+  margin-right: 2px;
+}
+
+.swiper-button-next::after {
+    background-image: url(../images/icons/arrow-right.png);
+    margin-left: 2px;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(0, 0, 0);
+    border-radius: 100%;
+    top: 50% !important;
+    transform: translateY(-50%);
+    margin-top: 0 !important;
+}

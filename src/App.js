@@ -1,25 +1,168 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { RiArrowRightSLine } from 'react-icons/ri';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import HomePage from './pages/homepage.js';
+import AccordionPage from './pages/accordion-page.js';
+import TodoListPage from './pages/todo-list.js';
+import PasswordGenerator from './pages/password-generator.js';
+import Calculator from './pages/calculator.js';
+import AdditemPage from './pages/add-Item-page.js';
+import AddtoCartPage from './pages/add-to-cart.js';
+import PasswordValidator from './pages/password-validator.js';
+import FilterSort from './pages/filter-sort.js';
+import FilterItem from './pages/filter-item.js';
+import TrackTodo from './pages/track-todo.js';
+import SimpleDataFetching from './pages/simple-data-fetching.js';
+import Modalpage from './pages/modal-page.js';
+import Tabbingpage from './pages/tabbing-page.js';
+import Dropdownpage from './pages/dropdown-page.js';
+import FakeStoreFetching from './pages/fake-store-fetching.js';
+import Carousel from './pages/carousel-page.js';
+import LoginVerification from './pages/login-verification-page.js';
+import SocialmediPost from './pages/social-media-post-page.js';
 
-function App() {
+const MainContent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      {/* <Sidebar /> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/accordion-page" element={<AccordionPage />} />
+        <Route path="/add-Item-page" element={<AdditemPage />} />
+        <Route path="/add-to-cart" element={<AddtoCartPage />} />
+        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/carousel-page" element={<Carousel />} />
+        <Route path="/dropdown-page" element={<Dropdownpage />} />
+        <Route path="/filter-item" element={<FilterItem />} />
+        <Route path="/filter-sort" element={<FilterSort />} />
+        <Route path="/login-verification-page" element={<LoginVerification />} />
+        <Route path="/tabbing-page" element={<Tabbingpage />} />
+        <Route path="/todo-list" element={<TodoListPage />} />
+        <Route path="/track-todo" element={<TrackTodo />} />
+        <Route path="/modal-page" element={<Modalpage />} />
+        <Route path="/password-generator" element={<PasswordGenerator />} />
+        <Route path="/password-validation" element={<PasswordValidator />} />
+        <Route path="/simple-data-fetching" element={<SimpleDataFetching />} />
+        <Route path="/social-media-post-page" element={<SocialmediPost />} />
+        <Route path="/fake-store-fetching" element={<FakeStoreFetching />} />
+      </Routes>
+    </>
+  );
+};
+
+const Navbar = ({ isOpen, toggleSidebar }) => {
+  return (
+    <nav className="bg-neutral-950 py-4 px-4 flex justify-between items-center top-0 w-full fixed h-14">
+      <a href="/" className="text-white text-lg font-bold">Purely React</a>
+      <button className="rounded-sm p-2 bg-neutral-800 lg:hidden hover:bg-neutral-700" style={{ width: "40px", height: "40px" }} onClick={toggleSidebar}>
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className="text-white" />
+      </button>
+    </nav>
+  );
+};
+
+const Sidebar = () => {
+  return (
+    <div className="fixed left-0 top-14 min-h-screen h-full w-full bg-white border-r-2 pt-2 sm:w-64 lg:pt-5">
+      <nav className="flex flex-col">
+        <Link to="/" exact className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Overview <RiArrowRightSLine className="ml-auto" />
+        </Link>
+
+        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Basic components</p>
+        <Link to="/accordion-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Accordion <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/carousel-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Carousel <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/dropdown-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Dropdown <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/modal-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Modal <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/tabbing-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Tabbing <RiArrowRightSLine className="ml-auto" />
+        </Link>
+
+        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Function components</p>
+        <Link to="/add-Item-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Add item <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/add-to-cart" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Add to cart <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/calculator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Calculator <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/filter-item" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Filter item <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/filter-sort" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Filter and sort <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/login-verification-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Login verification <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/todo-list" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Todo list <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/track-todo" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Todo list tracker <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/password-generator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Password generator <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/password-validation" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Password validation <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/social-media-post-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Social media post <RiArrowRightSLine className="ml-auto" />
+        </Link>
+
+        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Fetching Components</p>
+        <Link to="/simple-data-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Simple data fetching <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/fake-store-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+          Fake store fetching <RiArrowRightSLine className="ml-auto" />
+        </Link>
+      </nav>
     </div>
   );
-}
+};
 
-export default App;
+
+
+const AdminPanel = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    console.log(isOpen)
+  };
+
+  return (
+    <Router>
+      <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
+      <div className="flex bg-zinc-100">
+        {windowSize > 810 && <Sidebar />}
+        <MainContent className={`${windowSize <= 810 ? 'ml-0 ' : 'ml-64 '} bg-gray-100`} />
+
+        {windowSize <= 810 && isOpen && <Sidebar />}
+      </div>
+    </Router>
+  );
+};
+
+export default AdminPanel;

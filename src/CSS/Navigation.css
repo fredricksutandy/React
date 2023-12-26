@@ -1,0 +1,41 @@
+/* Navigation.css */
+
+.relative {
+    position: relative;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .hover-trigger:hover ~ .menu-container {
+    display: flex;
+  }
+  
+  .hover-trigger:hover ~ .menu-container .menu-content {
+    display: flex;
+  }
+  
