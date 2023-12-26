@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ItemList from '../components/FilterItem/ItemList';
+import dribbble from '../images/dribbble.png';
 
 function FilterSort() {
 
@@ -59,6 +60,13 @@ function FilterSort() {
 
   return (
     <div className='w-full mt-14 sm:ml-64'>
+      <div className='px-3 py-4 md:px-20 lg:px-30 xl:36 pt-40 pb-10 w-100' 
+        style={{
+        backgroundImage: `url(${dribbble})`,
+        backgroundSize: '40%',
+      }}>
+        <h1 className="text-4xl font-bold text-black w-fit sm:text-5xl px-8 pb-8 pt-6 bg-white w-auto">Carousel</h1>
+      </div>
         <div className='px-8 sm:px-4 pb-8 pt-6'>
           <h1 className="text-4xl font-bold text-black w-fit sm:text-5xl mb-8 w-auto">Filter and sort function</h1>
           <p className="font-bold text-3xl mb-5">Demo</p>

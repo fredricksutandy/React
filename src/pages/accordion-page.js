@@ -51,25 +51,21 @@ const AccordionPage = () => {
 
   return (
     <div className='w-full mt-14 md:ml-64'>
-      <div className='px-3 py-4 md:px-20 lg:px-30 xl:36 pt-40 pb-10 w-100' 
-        style={{
-        backgroundImage: `url(${dribbble})`,
-        backgroundSize: '50%',
-      }}>
+      <div className='px-3 py-4 md:px-20 lg:px-30 xl:36 pt-40 pb-10 w-100 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'>
         <h1 className="text-4xl font-bold text-black w-fit sm:text-5xl px-8 pb-8 pt-6 bg-white w-auto">Accordion</h1>
       </div>
       <div className="px-3 py-4 md:px-20 lg:px-30 xl:36 md:py-16 w-full h-full">
-      <p className="text-md md:text-xl text-black max-w-[800px] mb-20">Accordion is a graphical control element comprising a vertically stacked list of items, such as labels or thumbnails. Each item can be "expanded" or "collapsed" to reveal the content associated with that item.</p>
-        
-        <p className="font-bold text-3xl mb-5">Usage Scenarios</p>
-        <p className="text-md md:text-1xl text-black max-w-[800px] mb-20"> Accordions are widely used in web development for organizing and presenting information in a hierarchical structure. They are commonly found in:
-          <ul className='mt-5 flex flex-col gap-2 text-md ms-4'>
-            <li>- Navigation menus</li>
-            <li>- FAQs (Frequently Asked Questions) sections</li>
-            <li>- Settings panels</li>
-            <li>- Any scenario requiring a compact, expandable/collapsible content layout.</li>
-          </ul>
-        </p>
+      <p className="text-md md:text-xl text-black max-w-[800px] mb-20">Accordion is a graphical control element comprising a vertically stacked list of items, such as labels or thumbnails. Each item can be "expanded" or "collapsed" to reveal the content associated with that item. -<a className='mb-20 text-blue-500' href="https://en.wikipedia.org/wiki/Accordion_(GUI)"> by, Wikipedia</a></p>  
+
+      <p className="font-bold text-3xl mb-5">Usage Scenarios</p>
+      <p className="text-md md:text-1xl text-black max-w-[800px] mb-20"> Accordions are widely used in web development for organizing and presenting information in a hierarchical structure. They are commonly found in:
+        <ul className='mt-5 flex flex-col gap-2 text-md ms-4'>
+          <li>- Navigation menus</li>
+          <li>- FAQs (Frequently Asked Questions) sections</li>
+          <li>- Settings panels</li>
+          <li>- Any scenario requiring a compact, expandable/collapsible content layout.</li>
+        </ul>
+      </p>
 
         <p className="font-bold text-3xl mb-5">Demo</p>
         <div className="mb-20 bg-white p-8 md:p-10 w-fit flex flex-col w-full max-w-[800px] h-[300px] overflow-y-auto">

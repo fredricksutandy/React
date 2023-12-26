@@ -67,67 +67,67 @@ const Sidebar = () => {
   return (
     <div className="fixed left-0 top-14 min-h-screen h-full w-full bg-white border-r-2 pt-2 sm:w-64 lg:pt-5">
       <nav className="flex flex-col">
-        <Link to="/" exact className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/" exact className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Overview <RiArrowRightSLine className="ml-auto" />
         </Link>
 
-        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Basic components</p>
-        <Link to="/accordion-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Basic components</p>
+        <Link to="/accordion-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Accordion <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/carousel-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/carousel-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Carousel <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/dropdown-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/dropdown-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Dropdown <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/modal-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/modal-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Modal <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/tabbing-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/tabbing-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Tabbing <RiArrowRightSLine className="ml-auto" />
         </Link>
 
-        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Function components</p>
-        <Link to="/add-Item-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Function components</p>
+        <Link to="/add-Item-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Add item <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/add-to-cart" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/add-to-cart" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Add to cart <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/calculator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/calculator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Calculator <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/filter-item" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/filter-item" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Filter item <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/filter-sort" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/filter-sort" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Filter and sort <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/login-verification-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/login-verification-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Login verification <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/todo-list" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/todo-list" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Todo list <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/track-todo" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/track-todo" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Todo list tracker <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/password-generator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/password-generator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Password generator <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/password-validation" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/password-validation" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Password validation <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/social-media-post-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/social-media-post-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Social media post <RiArrowRightSLine className="ml-auto" />
         </Link>
 
-        <p className="text-gray-400 text-sm mb-1 mt-6 px-4">Fetching Components</p>
-        <Link to="/simple-data-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Fetching Components</p>
+        <Link to="/simple-data-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Simple data fetching <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/fake-store-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100">
+        <Link to="/fake-store-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Fake store fetching <RiArrowRightSLine className="ml-auto" />
         </Link>
       </nav>
