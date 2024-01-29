@@ -22,6 +22,7 @@ import FakeStoreFetching from './pages/fake-store-fetching.js';
 import Carousel from './pages/carousel-page.js';
 import LoginVerification from './pages/login-verification-page.js';
 import SocialmediPost from './pages/social-media-post-page.js';
+import CSSEditorPage from './pages/css-editor-page.js';
 
 const MainContent = () => {
   return (
@@ -34,6 +35,7 @@ const MainContent = () => {
         <Route path="/add-to-cart" element={<AddtoCartPage />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/carousel-page" element={<Carousel />} />
+        <Route path="/css-editor-page" element={<CSSEditorPage />} />
         <Route path="/dropdown-page" element={<Dropdownpage />} />
         <Route path="/filter-item" element={<FilterItem />} />
         <Route path="/filter-sort" element={<FilterSort />} />
@@ -63,71 +65,74 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
   );
 };
 
-const Sidebar = () => {
+const Sidebar = ({toggleSidebar}) => {
   return (
     <div className="fixed left-0 top-14 min-h-screen h-full w-full bg-white border-r-2 pt-2 sm:w-64 lg:pt-5">
       <nav className="flex flex-col">
-        <Link to="/" exact className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/" exact onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Overview <RiArrowRightSLine className="ml-auto" />
         </Link>
 
         <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Basic components</p>
-        <Link to="/accordion-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/accordion-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Accordion <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/carousel-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/carousel-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Carousel <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/dropdown-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/dropdown-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Dropdown <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/modal-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/modal-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Modal <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/tabbing-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/tabbing-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Tabbing <RiArrowRightSLine className="ml-auto" />
         </Link>
 
         <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Function components</p>
-        <Link to="/add-Item-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/add-Item-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Add item <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/add-to-cart" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/add-to-cart" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Add to cart <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/calculator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/calculator" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Calculator <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/filter-item" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/css-editor-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+          CSS editor <RiArrowRightSLine className="ml-auto" />
+        </Link>
+        <Link to="/filter-item" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Filter item <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/filter-sort" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/filter-sort" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Filter and sort <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/login-verification-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/login-verification-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Login verification <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/todo-list" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/todo-list" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Todo list <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/track-todo" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/track-todo" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Todo list tracker <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/password-generator" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/password-generator" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Password generator <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/password-validation" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/password-validation" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Password validation <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/social-media-post-page" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/social-media-post-page" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Social media post <RiArrowRightSLine className="ml-auto" />
         </Link>
 
         <p className="text-gray-400 text-xs mb-1 mt-6 px-4">Fetching Components</p>
-        <Link to="/simple-data-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/simple-data-fetching" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Simple data fetching <RiArrowRightSLine className="ml-auto" />
         </Link>
-        <Link to="/fake-store-fetching" className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
+        <Link to="/fake-store-fetching" onClick={toggleSidebar} className="flex items-center text-base py-2 px-4 hover:bg-gray-100 text-sm">
           Fake store fetching <RiArrowRightSLine className="ml-auto" />
         </Link>
       </nav>
@@ -149,17 +154,16 @@ const AdminPanel = () => {
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen)
   };
 
   return (
     <Router>
       <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
       <div className="flex bg-zinc-100">
-        {windowSize > 810 && <Sidebar />}
+        {windowSize > 810 && <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />}
         <MainContent className={`${windowSize <= 810 ? 'ml-0 ' : 'ml-64 '} bg-gray-100`} />
 
-        {windowSize <= 810 && isOpen && <Sidebar />}
+        {windowSize <= 810 && isOpen && <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />}
       </div>
     </Router>
   );
